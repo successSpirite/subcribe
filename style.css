@@ -1,0 +1,185 @@
+
+@import url('https://fonts.google.com/specimen/Roboto');
+
+:root{
+ --Blue800-- : hsl(234, 29%, 20%);
+ --Blue700--: hsl(235, 18%, 26%);
+--Grey--: hsl(0, 0%,58%);
+--White--: hsl(0, 0%, 100%);
+--Red--: hsl(4, 100%, 67%);
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color:  var(--Blue700--);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    
+}
+.wrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.flex{
+    width: 60vw;
+    height: 80vh;
+    background-color: var(--White--);
+    border-radius: 2em;
+    display: grid;
+    grid-template-columns:  1fr 400px;
+      
+}
+.flexbox1{
+    justify-self: center;
+    align-self: flex-start;
+    text-align: center;
+    margin: 5em 0 0 2em ;
+}
+.flexbox1 >*{
+    margin: 1em;
+}
+h1{
+    font-size: 40px;;
+}
+ul{
+    padding: 1em;
+    list-style: none;
+}
+ul li{
+    padding: 4px;
+    text-align: start;
+    
+}
+
+.flexbox2 {
+ justify-self: center;
+ align-self: center;
+
+}
+ .flexbox2 img{
+    height: 34em;
+}
+h3{
+    width: 25vw;
+   background-color: var(--Blue700--);
+   color: white;
+   padding: 1em;
+   border-radius: 0.5rem;
+   justify-self: center;
+   align-self: center;
+   cursor: pointer;
+}
+h2{
+    text-align: start;
+    font-size: 12px;
+    margin: 0 20px 10px 20px;
+    cursor: pointer;
+}
+address input{
+    width: 25vw;
+    padding: 1.4em;
+    border-radius: 0.5rem;
+
+}
+input::placeholder{
+    font-weight: bolder;
+}  
+h3:active{
+    background-color: var(--Red--);
+}    
+span{
+    padding: 1em;
+}
+
+span img{
+    font-size: .5px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .flex{
+        width: 90vw;
+        height: 80vh;
+}
+    .flexbox1{
+        margin-top: 14em;
+    }
+  h1{
+    font-size: 26px;
+  }
+  h3{
+    padding: .5rem;
+    font-size: 13px;
+    width: 30vw;
+    justify-self: start;
+  }
+  address input{
+    width: 30vw;
+    padding: 0.5rem;
+}
+address{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+    
+}
+ @media (max-width: 425px) {
+    .flex{
+        grid-template-columns: 1fr;
+        width: 100vw;
+        min-height: 100%;
+        overflow-y: auto;
+        
+    } 
+    
+    .flexbox1{
+        order: 2;
+        margin: 0 0 0 0;
+        justify-self: start;
+        align-self: flex-start;
+    }
+    .flexbox2{
+       order: 1;
+       
+    }
+    h1{
+        font-size: 30px;
+    }
+
+    .flexbox2 img{
+    width: 100vw;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    }
+    address input{
+        width: 80vw;
+        padding: .9em;
+        border-radius: 0.2rem;
+    }
+    h3{
+        width: 80vw;
+       background-color: var(--Blue700--);
+       padding: .9em;
+       border-radius: 0.3rem;
+       font-size: 13px;
+
+    }
+    span{
+        padding: .2em;
+    }
+}
